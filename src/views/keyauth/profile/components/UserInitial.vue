@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <tips title="欢迎 xxx 登陆系统, 在使用之前, 请完善如下信息" />
+    <tips :title="title" />
     <div class="box-shadow" style="background-color: #fff">
       <div>
         <el-steps :active="active" simple>
@@ -173,7 +173,7 @@ export default {
       tips,
       languageOptions,
       active: 0,
-      formLabelWidth: "50px",
+      formLabelWidth: "60px",
       profileForm: {
         phone: "",
         email: "",
@@ -205,6 +205,11 @@ export default {
         ],
       },
     };
+  },
+  computed: {
+    title() {
+      return `欢迎 ${this.$store.getters.account} 登陆系统, 在使用之前, 请完善如下信息`;
+    },
   },
   methods: {
     next() {
