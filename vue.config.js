@@ -49,6 +49,12 @@ module.exports = {
         secure: false,
         changeOrigin: true,
       },
+      "/workflow/api/v1": {
+        target: "http://localhost:9948",
+        ws: true,
+        secure: false,
+        changeOrigin: true,
+      },
     },
   },
   configureWebpack: {

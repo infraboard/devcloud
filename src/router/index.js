@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import { beforeEach, afterEach } from "./permission";
 import cmdbRoutes from "./system/cmdb";
 import adminRoutes from "./system/admin";
+import workflowRoutes from "./system/workflow";
 import Layout from "@/layout";
 
 Vue.use(VueRouter);
@@ -46,6 +47,8 @@ const routes = [
   cmdbRoutes,
   // admin 路由
   adminRoutes,
+  // workflow 路由
+  workflowRoutes,
   {
     path: "/404",
     component: () => import("@/views/common/error-page/404"),

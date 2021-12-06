@@ -3,6 +3,7 @@
     <el-scrollbar wrap-class="scrollbar-wrapper">
       <cmdb-menu :isCollapse="isCollapse" v-show="isSystem('cmdb')" />
       <admin-menu :isCollapse="isCollapse" v-show="isSystem('admin')" />
+      <workflow-menu :isCollapse="isCollapse" v-show="isSystem('workflow')" />
     </el-scrollbar>
   </div>
 </template>
@@ -10,12 +11,14 @@
 <script>
 import CmdbMenu from "./menu/CmdbMenu.vue";
 import AdminMenu from "./menu/AdminMenu.vue";
+import WorkflowMenu from "./menu/WorkflowMenu.vue";
 
 export default {
   name: "Sidebar",
   components: {
     CmdbMenu,
     AdminMenu,
+    WorkflowMenu,
   },
   data() {
     return {
