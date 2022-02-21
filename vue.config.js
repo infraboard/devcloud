@@ -49,8 +49,20 @@ module.exports = {
         secure: false,
         changeOrigin: true,
       },
+      "/eventbox/api/v1": {
+        target: "http://localhost:8070",
+        ws: true,
+        secure: false,
+        changeOrigin: true,
+      },
+      "/mpaas/api/v1": {
+        target: "http://localhost:8080",
+        ws: true,
+        secure: false,
+        changeOrigin: true,
+      },
       "/workflow/api/v1": {
-        target: "http://localhost:9948",
+        target: "http://localhost:8090",
         ws: true,
         secure: false,
         changeOrigin: true,
